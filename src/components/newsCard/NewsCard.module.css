@@ -1,0 +1,63 @@
+.newsCard {
+    width: min(425px, 90%);
+    border-radius: 1rem;
+    
+}
+.dark {
+    background-color: rgb(26, 29, 33);
+    border: 1px solid rgb(49, 54, 60);
+}
+.white {
+    background-color: #EDEDED;
+    border: 1px solid rgb(235, 235, 235);
+}
+.newsCard > img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+.cardBody {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.cardBody > h4 {
+    font-weight: 400;
+}
+.cardBody > h5 {
+    letter-spacing: .5px;
+    font-size: 1rem;
+}
+.cardBody > p {
+    text-align: left;
+}
+.cardBody > a {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+    margin: 1rem 0;
+}
+.dark > .cardBody > a {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.white > .cardBody > a {
+    background-color: var(--whiteMode-color);
+    color: var(--tertiary-color);
+}
+.dark > .cardBody > a:hover {
+    background-color: var(--tertiary-color);
+}
+.white > .cardBody > a:hover {
+    background-color: var(--primary-color);
+}
+.cardBody > small {
+    text-align: left;
+}
+.dark span {
+    color: var(--secondary-color);
+}
+.white span {
+    color: var(--whiteMode-color);
+}

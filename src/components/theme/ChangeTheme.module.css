@@ -1,0 +1,10 @@
+.themeToggle {
+    padding-top: 5px;
+    cursor: pointer;
+}
+.moon {
+    color: var(--whiteMode-color);
+}
+.sun {
+    color: var(--secondary-color);
+}

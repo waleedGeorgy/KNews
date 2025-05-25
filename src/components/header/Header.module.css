@@ -1,0 +1,90 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+.dark {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}
+.white {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+.navbar > h1 {
+    margin-right: auto;
+    font-size: 3rem;
+    font-weight: 400;
+    padding-left: 2rem;
+    letter-spacing: 1px;
+}
+.navbar > h1 > a {
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+}
+.dark > h1 > a {
+    color: var(--secondary-color);
+}
+.white > h1 > a {
+    color: var(--whiteMode-color);
+}
+.navbar > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 2rem;
+}
+.navbar > form > input {
+    font-family: inherit;
+    border-radius: .5rem;
+    padding: .5rem;
+    outline: none;
+    border: none;
+}
+.dark > form > input {
+    background-color: var(--primary-color);
+    outline: 1px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+.white > form > input {
+    background-color: var(--tertiary-color);
+    outline: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.dark > form > input:focus {
+    outline: 1px solid var(--secondary-color);
+}
+.white > form > input:focus {
+    outline: 1px solid var(--whiteMode-color);
+}
+.navbar > form > button {
+    font-family: inherit;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: background-color .3s ease-in-out;
+}
+.dark > form > button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.white > form > button {
+    background-color: var(--whiteMode-color);
+    color: var(--tertiary-color);
+}
+.dark > form > button:hover {
+    background-color: var(--tertiary-color);
+}
+.white > form > button:hover {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}

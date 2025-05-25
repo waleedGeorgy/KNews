@@ -1,0 +1,33 @@
+.searchResultsArea {
+    text-align: center;
+    padding: 2rem 0;
+}
+.dark {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}
+.white {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+.searchResultsArea h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+.searchResultsArea h2 > span {
+    font-weight: 500;
+}
+.dark h2 > span {
+    color: var(--secondary-color);
+}
+.white h2 > span {
+    color: var(--whiteMode-color);
+}
+.searchResultsCards {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+}

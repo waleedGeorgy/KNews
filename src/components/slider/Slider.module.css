@@ -1,0 +1,100 @@
+.slider {
+    padding-bottom: 1rem;
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.dark {
+    background-color: rgb(26, 29, 33);
+    border: 1px solid rgb(49, 54, 60);
+}
+.white {
+    background-color: #EDEDED;
+    border: 1px solid rgb(235, 235, 235);
+}
+.leftArr, .rightArr {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+.dark .leftArr, .dark .rightArr {
+    color: var(--secondary-color);
+}
+.white .leftArr, .white .rightArr {
+    color: var(--whiteMode-color);
+}
+.leftArr {
+    left: 8%;
+}
+.rightArr {
+    right: 8%;
+}
+.sliderBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.sliderBody > img {
+    width: 100%;
+    height: 475px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+.sliderBody h2 {
+    padding: 0 5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.sliderFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.dark .sliderFooter {
+    background-color: var(--primary-color);
+    border: 1px solid rgb(49, 54, 60);
+}
+.white .sliderFooter {
+    background-color: var(--tertiary-color);
+    border: 1px solid rgb(235, 235, 235);
+}
+.sliderFooter h4:last-child {
+    font-weight: 300;
+}
+.sliderFooterIcon {
+    position: relative;
+    top: 2px;
+}
+.dark span {
+    color: var(--secondary-color);
+}
+.white span {
+    color: var(--whiteMode-color);
+}
+.sliderBody a {
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
+.dark a {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.dark a:hover {
+    background-color: var(--tertiary-color);
+}
+.white a {
+    background-color: var(--whiteMode-color);
+    color: var(--tertiary-color);
+}
+.white a:hover {
+    background-color: var(--primary-color);
+}

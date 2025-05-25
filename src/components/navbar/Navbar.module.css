@@ -1,0 +1,62 @@
+.topUl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.dark > li > a {
+    color: var(--tertiary-color);
+}
+.white > li > a {
+    color: var(--primary-color);
+}
+.topUl p, .topUl a {
+    transition: all .3s ease-in-out;
+}
+.dark p:hover, .dark a:hover {
+    color: var(--secondary-color);
+}
+.white p:hover, .white a:hover {
+    color: var(--whiteMode-color);
+}
+.topUl li:hover ul {
+    display: block;
+}
+.topUl a {
+    color: var(--tertiary-color);
+}
+.topUl p {
+    cursor: pointer;
+}
+.dark > li > ul {
+    background-color: rgba(0,0,0,0.7);
+}
+.white > li > ul {
+    background-color: rgba(245, 245, 245, .7);
+    outline: 1px solid var(--primary-color);
+}
+.bottomUl {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    border-radius: .5rem;
+    backdrop-filter: blur(10px);
+    width: min(175px, 90%);
+}
+.bottomUl li {
+    cursor: pointer;
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: .5rem;
+}
+.dark li ul li:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.white li ul li:hover {
+    background-color: var(--whiteMode-color);
+    color: var(--tertiary-color);
+}
