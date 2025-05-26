@@ -22,10 +22,9 @@ const useHomeNews = () => {
         }
     }
 
-    useEffect(() => {
-        fetchTopHeadlines();
-    }, [url]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => { fetchTopHeadlines() }, [url]);
 
-    return {news, theme}
+    return {news, country, theme}
 }
 export default useHomeNews

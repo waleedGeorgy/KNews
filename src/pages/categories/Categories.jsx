@@ -1,38 +1,13 @@
 import { useLocation } from "react-router";
 import styles from "./Categories.module.css";
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
-import ThemeContext from "../../context/ThemeContext";
 import NewsCard from "../../components/newsCard/NewsCard";
+import useCategoriesNews from "../../hooks/useCategoriesNews";
 
 const Categories = () => {
   const category = useLocation();
   const newsCategory = category.state.category;
-  
-  const [news, setNews] = useState([]);
-  const [filter, setFilter] = useState("");
-  const theme = useContext(ThemeContext);
 
-  const api_key = import.meta.env.VITE_API_KEY;
-  const url = `https://newsapi.org/v2/top-headlines?category=${newsCategory}&apiKey=${api_key}`
-  const filterUrl = `https://newsapi.org/v2/top-headlines?country=${filter}&category=${newsCategory}&apiKey=${api_key}`
-
-  const fetchCategoryNews = async(url) => {
-    try {
-      const res = await axios.get(url);
-      setNews(res.data.articles);
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const handleFilter = (e) => {
-    e.preventDefault();
-    fetchCategoryNews(filterUrl);
-    setFilter("");
-  }
-
-  useEffect(() => { fetchCategoryNews(url) }, [url]);
+  const {news, theme, filter, handleFilter, setFilter} = useCategoriesNews("", newsCategory);
 
   return (
     <div className={`${styles.container} ${theme.state.darkMode ? styles.dark : styles.white}`}>
