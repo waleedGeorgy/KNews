@@ -1,8 +1,6 @@
-import { useContext } from "react";
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import ThemeContext from "../context/ThemeContext";
 import axios from "axios";
-import { useEffect } from "react";
 
 const useSearchNews = (initialState = "") => {
     const [news, setNews] = useState("");
